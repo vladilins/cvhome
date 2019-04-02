@@ -1,0 +1,10 @@
+<app-skills-create></app-skills-create>
+<div class="container" *ngIf="skills.length > 0">
+  <h1>Skills</h1>
+  <ul class="list-group list-group-flush" *ngFor="let skill of skills">
+    <li class="list-group-item">
+      {{ skill.title }}
+    </li>
+  </ul>
+</div>
+<div class="container" *ngIf="skills.length <= 0">No Skills added</div>

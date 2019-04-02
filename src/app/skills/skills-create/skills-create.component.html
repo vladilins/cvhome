@@ -1,0 +1,20 @@
+<div class="container">
+  <form (submit)="onAddSkill(skillForm)" #skillForm="ngForm">
+    <div class="form-group">
+      <label>Skills</label>
+      <input
+        type="text"
+        name="title"
+        minlength="2"
+        ngModel
+        required
+        class="form-control"
+        #title="ngModel"
+        placeholder="Enter skills"
+      />
+    </div>
+    <p class="alert alert-danger" *ngIf="title.invalid">Please add skills</p>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
